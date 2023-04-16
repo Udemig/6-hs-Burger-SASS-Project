@@ -24,6 +24,7 @@ uygularken => @extend %degisken_adi
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -131,11 +132,17 @@ uygularken => @extend %degisken_adi
 .banner-middle {
   width: 33%;
   position: relative;
+  transform: scaleX();
+}
+.banner-middle:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: ease-in 0.3s;
 }
 .banner-middle span {
   position: absolute;
-  top: 5%;
-  right: 7%;
+  top: 15%;
+  right: 10%;
   background-color: #ffc736;
   font-weight: 600;
   padding: 3px 6px;
@@ -144,12 +151,7 @@ uygularken => @extend %degisken_adi
 .banner-middle img {
   width: 100%;
   height: auto;
-  transform: scaleX();
-}
-.banner-middle img:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: ease-in 0.3s;
+  padding: 50px 0;
 }
 .banner-right {
   width: 33%;
@@ -158,6 +160,9 @@ uygularken => @extend %degisken_adi
 .banner-right h4 {
   color: #ffc736;
   font-size: 28px;
+}
+.banner-right p {
+  color: white;
 }
 
 .product {
@@ -188,6 +193,7 @@ uygularken => @extend %degisken_adi
   border-radius: 40px 40px 0px 0px;
   box-shadow: 2px 2px 5px gray;
   margin-bottom: 10px;
+  margin-top: 20px;
   transform: scaleX();
 }
 .products-card:hover {
@@ -202,6 +208,7 @@ uygularken => @extend %degisken_adi
   background-color: rgb(188, 0, 22);
   text-overflow: ellipsis;
   border-radius: 40px 40px 0px 0px;
+  padding-top: 17px;
 }
 .products-card p {
   margin: 10px 0;
@@ -230,6 +237,10 @@ uygularken => @extend %degisken_adi
   transform: scale(1.1);
   transition: ease-in 0.3s;
 }
+.products-card-order button {
+  margin-bottom: 10px;
+}
+
 /* ORDER */
 .order {
   width: 100%;
@@ -303,7 +314,7 @@ uygularken => @extend %degisken_adi
   gap: 50px;
 }
 .footer-title {
-  text-align: center;
+  text-align: start;
 }
 .footer-title p {
   font-size: 32px;
@@ -317,7 +328,8 @@ uygularken => @extend %degisken_adi
   color: orange;
 }
 .footer-title P {
-  font-size: 52px;
+  font-size: 48px;
+  width: 200px;
 }
 .footer-title ul {
   display: flex;
@@ -330,19 +342,17 @@ uygularken => @extend %degisken_adi
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  border: 3px solid green;
+  justify-content: space-evenly;
 }
 .footer-menu ul {
-  width: 200px;
+  width: 250px;
   display: flex;
-  border: 3px solid red;
   flex-direction: column;
 }
 .footer-menu ul li:nth-child(1) {
   font-weight: 700;
 }
-.footer-menu ul li:nth-child(1):hover {
+.footer-menu ul li:hover {
   color: rgb(188, 0, 22);
 }
 .footer li {
